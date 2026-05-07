@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   Global styles (اختياري)
+================================ */
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #111827; /* gray-900 */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes drive-rtl {
+  0% {
+    transform: translateX(8px) scaleX(-1);
+  }
+  50% {
+    transform: translateX(-8px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(8px) scaleX(-1);
+  }
+}
+
+.drive-animation {
+  animation: drive-rtl 3.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.car-rtl {
+  transform: scaleX(-1);
+  display: inline-block;
+}
