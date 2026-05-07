@@ -90,7 +90,8 @@ const MaintenanceReminders = () => {
 
   const token = sessionStorage.getItem("userToken");
   const [upcomingReminders, setUpcomingReminders] = useState<Reminder[]>([]);
-  const [daysAhead, setDaysAhead] = useState<number>(7);
+  // const [daysAhead, setDaysAhead] = useState<number>(7);
+  const [daysAhead] = useState<number>(7);
 
   const fetchUpcoming = useCallback(async () => {
     try {
